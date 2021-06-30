@@ -1,0 +1,9 @@
+apiVersion: v1
+kind: VolumeSnapshot
+metadata:
+  name: snapshot-volume
+  namespace: default
+spec:
+  persistentVolumeClaimName: data-ct-mariadb-primary-0 
+
+

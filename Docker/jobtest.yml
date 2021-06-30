@@ -1,0 +1,19 @@
+apiVersion: batch/v1
+kind: Job
+metadata:
+  name: kjob
+  namespace: argocd
+  labels:
+    app: kjob
+spec:
+  template:
+    metadata:
+      name: kjob
+      labels:
+        app: kjob
+    spec:
+      containers:
+      - name: kjob
+        image: busybox
+        command: ['echo', 'hihi']
+      restartPolicy: OnFailure
